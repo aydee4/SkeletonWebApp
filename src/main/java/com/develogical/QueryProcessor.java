@@ -14,7 +14,7 @@ public class QueryProcessor {
     }
 
     if (query.toLowerCase().contains("plus")) {
-      String[] tokens = query.split(" ");
+      String[] tokens = query.replace("?", "").split(" ");
       List<String> numbers = new ArrayList<>();
       for (int i = 0; i < tokens.length; i++) {
         if (isANumber(tokens[i])) {
