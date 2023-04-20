@@ -19,4 +19,9 @@ public class QueryProcessorTest {
   public void knowsAboutShakespeare() throws Exception {
     assertThat(queryProcessor.process("Shakespeare"), containsString("playwright"));
   }
+
+  @Test
+  public void canAddTwoNumbersTogether() throws Exception {
+    assertThat(queryProcessor.process("What is 17 plus 90?"), containsString("107"));
+  }
 }
